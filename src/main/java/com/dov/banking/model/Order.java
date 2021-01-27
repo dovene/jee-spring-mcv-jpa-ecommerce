@@ -9,6 +9,8 @@ public class Order {
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     private Date date;
+    @ManyToOne
+    @JoinColumn(name="idUser")
     private User user;
 
 

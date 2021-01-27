@@ -19,6 +19,10 @@ public class ArticleController {
 
     @GetMapping
     public String list(HttpSession session, Model model) {
+        if (session.getAttribute("user") == null) {
+            return "redirect:/accessDenied";
+        }
+
         model.addAttribute("articles", articleJpaRepository.findAll());
         return "articles/articles";
     }

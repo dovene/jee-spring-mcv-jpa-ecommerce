@@ -30,7 +30,7 @@ public class LoginController {
         boolean isUserAllowed = user != null && user.getPassword().equals(userParam.getPassword());
         if (isUserAllowed) {
             session.setAttribute("user", userParam);
-            return "redirect:/dashboard";
+            return "redirect:/articles";
         } else {
             return "redirect:/accessDenied";
         }

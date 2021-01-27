@@ -1,10 +1,12 @@
 com/dov/banking/repository/ArticleJpaRepository.class
 com/dov/banking/model/Order.class
 com/dov/banking/model/Article.class
+com/dov/banking/controller/CartController.class
 com/dov/banking/model/CartArticle.class
 com/dov/banking/model/Cart.class
 com/dov/banking/config/MvcConfig.class
 com/dov/banking/model/Account.class
+com/dov/banking/repository/CartDataRepository.class
 com/dov/banking/model/OrderArticle.class
 com/dov/banking/repository/OrderArticleJpaRepository.class
 com/dov/banking/model/Operation.class
@@ -12,6 +14,7 @@ com/dov/banking/repository/CartJpaRepository.class
 com/dov/banking/controller/ArticleController.class
 com/dov/banking/controller/DashboardController.class
 com/dov/banking/config/DBConfig.class
+com/dov/banking/model/CartData.class
 com/dov/banking/model/User.class
 com/dov/banking/repository/AccountJpaRepository.class
 com/dov/banking/repository/OperationJpaRepository.class

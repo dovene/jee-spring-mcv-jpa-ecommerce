@@ -7,27 +7,24 @@
 <body>
 <div class="container">
 	<br />
-	 <a class="btn btn-dark btn-lg" href="articles/create" role="button">Add an article</a>
+	 <a class="btn btn-dark btn-lg" href="articles/create" role="button">Valide le panier</a>
 	 <br />
 	 <br />
 		<table class="table table-sarticleed table-hover">
 		 <thead class="thead-dark">
-          <tr><th scope="col">Id</th>
+          <tr>
               <th scope="col">Designation</th>
               <th scope="col">Quantite</th>
-              <th scope="col">PU</th>
               <th scope="col" colspan="2">Actions</th>
           </tr>
           </thead>
           <tbody>
-           <c:forEach var="article" items="${articles}">
+           <c:forEach var="cart" items="${cart}">
            <tr>
-           <td>${article.id}</td>
-           <td>${article.designation}</td>
-           <td>${article.quantity}</td>
-           <td>${article.price}</td>
-           <td><a href="cart/create/${article.id}" class="btn btn-info">Ajouter au panier</a>
-
+           <td>${cart.designationArticle}</td>
+           <td>${cart.quantity}</td>
+            <td><a href="cart/delete?id=${cart.idCart}" class="btn btn-danger" onclick="if (!(confirm('Are you sure ?'))) return false">Delete</a>
+            </td>
            </td>
            </tr>
            </c:forEach>

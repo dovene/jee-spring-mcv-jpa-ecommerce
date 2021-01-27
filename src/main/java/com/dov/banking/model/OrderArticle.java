@@ -1,16 +1,23 @@
 package com.dov.banking.model;
 
-import javax.persistence.Entity;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "Article_Order")
 public class OrderArticle {
+
+    @Id
+    @GeneratedValue(strategy= GenerationType.IDENTITY)
     private int id;
     private int quantity;
     private double price;
+
+    @ManyToOne
+    @JoinColumn(name="idOrder")
     private Order order;
 
+    @ManyToOne
+    @JoinColumn(name="idArticle")
     private Article article;
 
     public int getId() {
